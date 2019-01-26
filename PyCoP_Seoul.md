@@ -472,11 +472,50 @@ if money:
 
 
 #### 비교연산자
-x < y : x가 y보다 작다
-x > y : x가 y보다 크다
-x == y : x가 y랑 같다
-x != y : x가 y랑 같지않다
-x >= y : x가 y보다 크거나 같다
-x <= y : x가 y보다 작거나 같다
+x < y : x가 y보다 작다  
+x > y : x가 y보다 크다  
+x == y : x가 y랑 같다  
+x != y : x가 y랑 같지않다  
+x >= y : x가 y보다 크거나 같다  
+x <= y : x가 y보다 작거나 같다  
 
+#### and, or, not
+x or y : x와 y둘중에 하나만 참이면 참이다  
+x and y : x와 y모두 참이여야 참이다  
+not x : x가 거짓이면 참이다  
+
+>>> money = 2000 있다  
+>>> card = True  
+>>> if money >= 3000 or card:  
+     print("택시타")  
+     else:  
+     print ("걸어가")  
+     
+     
+#### x ins, x not in s
+
+x in 리스트   x not in 리스트  
+x in 튜플    x not in 튜플  
+x in 문자열   x not in 문자열  
+
+>>>1 in [1,2,3]    
+True  
+
+>>> 1 not in [1,2,3]  
+False  
+
+>>> 'a' in ('a','b','c')  
+True  
+     
+>>> 'j' not in 'python'
+True
+
+
+>>> pocket = ['paper', 'Cellphone', 'money']
+if 'Cellphone' in pocket:
+       print("get phone_number")
+    else :
+       print("Solo")
+
+get phone_number!
 

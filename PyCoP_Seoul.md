@@ -565,7 +565,84 @@ while <조건문>:
 
 열번찍어 안넘어가는 나무 없다
 
-treehit = 0
-while treehit < 10:
-      treehit = treehit + 1
-      print ("나무를 %d번 찍었습니다." % treeHit)
+treehit = 0          변수초기화, 나무는 0부터 시작한다
+while treehit < 10:    반복한다 트리힛을 10번까지
+      treehit = treehit + 1    그리고 트리힛을 한번 돌때마다 1씩 추가한다 
+      print ("나무를 %d번 찍었습니다." % treeHit)    프린트 1번(변수)를 찍는다
+      if treeHit == 10:           만약 트리힛이 10인가? 1번이다. 다시 와일문으로, 트리힛이 10번인가 나무넘어갑니다 출력
+           print ("나무 넘어갑니다")
+           
+           
+           
+>>> prompt = """ 프롬프트를 정의한다 아래처럼 프린트함
+... 1. Add
+... 2. Del
+... 3. List
+... 4. Quit
+...
+... Enter number: """
+>>>
+
+
+>>> number = 0      넘버는 0부터
+>>> while number != 4:     넘버는 4까지
+...     print(prompt)       앞에 정의한 프롬프트 를 호출
+...     number = int(input())    넘버를 입력할 수있는 인풋 명령어
+...
+
+1. Add
+2. Del
+3. List
+4. Quit
+
+Enter number:
+
+4를 입력하면 최종적으로 나가게 된다
+
+#### while문 강제로 빠져나가기
+
+>>> coffee = 10
+>>> money = 300
+>>> while money:
+...     print("돈을 받았으니 커피를 줍니다.")
+...     coffee = coffee -1
+...     print("남은 커피의 양은 %d개입니다." % coffee)
+...     if coffee == 0:        --> 반복문이 무한으로 도는 상황에서 커피가 0이라면 if를 쓰고 커피없다고하고 break 써서 탈출함
+...         print("커피가 다 떨어졌습니다. 판매를 중지합니다.")
+...         break
+...
+
+
+#### while 문 맨처음으로 
+돌아가기
+>>> a = 0   --> 0으로 초기화하고
+>>> while a < 10:   --> while a가 10보다 작을 때
+...     a = a + 1    --> a는 1 씩 증가하는데
+...     if a % 2 == 0: continue    --> 만약, a의 나머지가 0이랑 같다면 컨티뉴, 다시 초기 while문으로 간다
+...     print(a)
+...
+
+
+result = 0
+a = 1
+while a <1000 :
+    if a % 3 == 0:
+    result += a
+    a +=1
+    
+ print(result)
+ 
+ Aclass = [20,55,67,82,45,33,90,87,100,25]
+ result = 0
+ while Aclass:
+        select = Aclass.pop()
+        if select >= 50:
+            result += select
+            
+ print(result)
+ 
+ i= 0
+ while True:
+     i += 1  --> while 실행시 1씩증가
+     if i > 10: break   i값이 10보다 크면 와일문 벗어난다
+     print ('*' * i)     i값은 1씩증가할때 * 출력

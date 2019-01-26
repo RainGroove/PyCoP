@@ -507,15 +507,65 @@ False
 >>> 'a' in ('a','b','c')  
 True  
      
->>> 'j' not in 'python'
-True
+>>> 'j' not in 'python'  
+True  
 
 
->>> pocket = ['paper', 'Cellphone', 'money']
-if 'Cellphone' in pocket:
-       print("get phone_number")
+>>> pocket = ['paper', 'Cellphone', 'money']  
+if 'Cellphone' in pocket:  
+       print("get phone_number")  
+    else :  
+       print("Solo")  
+
+get phone_number!  
+
+
+#### 다양한 조건을 판단하는 elif
+
+"주머니에 돈이있으면 택시를 타고, 주머니에 돈은없지만 카드가 있으면 택시를 타고"  
+"돈도없고 카드도 없으면 걸어가라"  
+
+>>> pocket = ['card','cellphone', 'ring']
+>>> card = True
+>>> if 'money' in pocket:
+      print("Taxi")      
     else :
-       print("Solo")
+        if card :
+           print("taxi")
+        else : 
+             print("걸어가")
+             
+             
+사실 위에를 현업에서는 많이 쓰는데
 
-get phone_number!
+poket = ['paper','cellphone']
+card = True
+if 'money' in poket:
+print("택시")
+elif card:
+print("택시)
+else :
+print("걸어가라")
 
+elif는 제한없이 사용할 수있다
+
+#### 조건부 표현식
+
+message = "succes" if score => 60 else "failure"
+
+
+#### While문
+
+반복해서 문장을 수행해야 하는경우 while문을 사용한다.
+while <조건문>:
+ <수행할 문장1>
+ <수행할 문장2>
+ 
+참인 동안 계속 반복한다
+
+열번찍어 안넘어가는 나무 없다
+
+treehit = 0
+while treehit < 10:
+      treehit = treehit + 1
+      print ("나무를 %d번 찍었습니다." % treeHit)

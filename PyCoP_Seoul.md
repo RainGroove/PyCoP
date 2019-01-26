@@ -646,3 +646,109 @@ while a <1000 :
      i += 1  --> while 실행시 1씩증가
      if i > 10: break   i값이 10보다 크면 와일문 벗어난다
      print ('*' * i)     i값은 1씩증가할때 * 출력
+     
+     
+#### for문
+
+for문의 기본구조는 다음과 같음
+for 변수 in 리스트(튜플, 문자열):
+수행할 문장 1
+수행할 문장 2
+
+
+test_list = ['one','two','three']
+for i in test_list:
+     print(i)
+     
+one
+two
+three
+
+
+a = [(1,2), (3,4), (5,6)]
+for (first, last) in a:
+     print(first +last)
+
+
+#### for문의 응용
+
+" 총 5명의 학생이 시험을 보았는데 시험점수가 60점 넘으면 합격이고, 그렇지 않으면 불합격"
+"합격인지 불합격인지 결과를 보여주시오
+
+marks = [90, 25, 67, 45, 80]
+
+number = 0
+for mark in marks:  --> mark라는 변수에 marks의 리스트를 넣는다
+    number  = number +1
+    if mark >= 60:
+       print("%d번의 학생은 합격이다" % number)
+    else:
+       print("%d번의 학생은 불합격이다" % number)
+
+for문의 continue도 같다
+다시 처음단계로 돌린다 이때 변수는 살아있다
+
+
+#### for문과 range함수
+자주 사용되는 경우가 많으며
+
+a = range(10)
+a
+range (0, 10)
+rainge(10)은 0부터 10미만의 숫자를 포함하는 range객체를 만들어준다
+
+range(시작숫자, 끝숫자)
+a = range(1,11)
+a
+range(1,11)
+
+
+예제)
+sum = 0
+for i in range(1,11):
+       sum = sum + i
+print(sum)
+55
+
+1+2+3+4+5+6+7+8+9+10+11을 반복하면서 더해준다
+
+marks = [90, 25, 67, 45, 80]
+for number in range(len(marks)):
+
+구구단 
+for i in range(2,10):
+    for j in range(1,10):
+        print(i*j, end =" ")
+    print('')
+    
+    
+#### 리스트안에 for문 포함이 된다
+
+a = [1,2,3,4]
+result = [num * 3 for num in a]
+print(result)
+
+[3,6,9,12] 출력됨
+
+
+#### 연습문제
+
+sum = 0
+for i in range(1,100):
+       sum = sum + i
+print(sum)
+
+
+
+Aclass = [70, 60, 55, 75, 95, 90, 80, 80, 85, 100]
+total =0
+for score in Aclass:
+     total += score
+average = total / len(Aclass)
+print(average)
+
+
+number = [1,2,3,4,5]
+result = [n*2 for n in numbers if n% 2==1]
+result
+[2,6,10]

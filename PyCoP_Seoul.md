@@ -779,5 +779,98 @@ print(add(3,4)) # 3,4는 인수
 
 입력값 --> 함수 --> 리턴값
 
-####일반적인 함수
+#### 일반적인 함수
 
+def 함수이름(매개변수):
+    <수행할 문장>
+    ..
+    return 결과값
+    
+def add(a,b):
+   result = a + b
+   return result
+   
+   
+>>> a = add(3,4)
+>>> print(a)
+7
+
+함수는 입력값이 없는 함수가 존재하고 문자열이 들어간다
+결과값을 받을 변수 = 함수명()
+
+
+>>> def add(a, b): 
+...     print("%d, %d의 합은 %d입니다." % (a, b, a+b))
+이 경우는 프린트문에 정의되었기때문에 리턴값은 없다
+
+>>> result = add(a=3, b=7)  # a에 3, b에 7을 전달
+>>> print(result)
+10
+매개변수 지정하여 호출할 수도 있다
+
+#### 입력값 여러개일 경우
+
+def 함수이름(*매개변수): 
+    <수행할 문장>
+    ...
+    
+def add_many(*args):
+    result = 0
+    for i in args:
+        result = result + i
+    return result
+     
+*args로 매개변수앞에 *를 붙이면 전부모아서 튜플로 만들어준다
+args는 영어단어닌 arguments의 약자이며 관례적으로 사용한다
+
+
+>>> result = add_many(1,2,3)
+>>> print(result)
+6
+>>> result = add_many(1,2,3,4,5,6,7,8,9,10)
+>>> print(result)
+55
+
+중복해서 쓸 수 있다
+
+def add_mul(choice, *args):
+    if choice == "add" :
+       result = 0
+    for i in args:
+         result = result + i
+    elif choice = "mul" :
+         result = 1
+         for i in args:
+              result = result * i
+         return result
+         
+         
+ #### 함수의 결과값은 언제나 하나이다
+ >>> def add_and_mul(a,b): 
+...     return a+b, a*b
+
+result = add_and_mul(3,4)
+
+result = (7, 12)
+즉 결과값을 튜플로 받는다
+
+>>> def add_and_mul(a,b): 
+...     return a+b 
+...     return a*b  --> 이경우 없는 것이나 마찬가지다 리턴은 1개만 된다
+
+return을 단독으로 써서 함수를 빠져나갈 수 있다
+
+
+평균값 계산
+def avg_value(*args):
+    result = 0
+    for i in args:
+        result = result + i
+    return result / len(args)
+    
+    
+    
+사용자 입력과 출력
+====
+
+사용자입력 -> 처리(프로그램,함수)-> 출력

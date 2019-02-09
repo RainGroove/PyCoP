@@ -874,3 +874,56 @@ def avg_value(*args):
 ====
 
 사용자입력 -> 처리(프로그램,함수)-> 출력
+
+사용자가 입력한 값을 어떤 변수를 대입할 때
+>>> a = input()
+Life is too short, you need python
+>>> a
+'Life is too short, you need python'
+>>>
+
+input("질문 내용")
+
+
+#### 파일 생성하기
+
+f = open("새파일.txt", 'w')
+f.close()
+
+open이라는 함수는 r 읽기모드, w 쓰기모드, a 파일 마지막에 새로운 내용 추가
+
+
+# writedata.py
+f = open("C:/doit/새파일.txt", 'w')
+for i in range(1, 11):
+    data = "%d번째 줄입니다.\n" % i
+    f.write(data)
+f.close()
+
+
+#### 프로그램 외부에 저장된 파일을 읽는 방법
+readline() 함수 이용하기
+
+# readline.py
+f = open("c:/doit/새파일.txt",'r')
+line = f.readline()
+print(line)
+f.close()
+
+# readline_all.py
+f = open("C:/doit/새파일.txt", 'r')
+while True:
+    line = f.readline()
+    if not line: break
+    print(line)
+f.close()
+모든 라인을 출력
+
+f = open("C:/doit/새파일.txt", 'r')
+lines = f.readlines()
+for line in lines:
+    print(line)
+f.close()
+
+with open("foo.txt", "w") as f:
+    f.write("Life is too short, you need python")

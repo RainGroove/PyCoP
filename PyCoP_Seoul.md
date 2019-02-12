@@ -893,7 +893,7 @@ f.close()
 open이라는 함수는 r 읽기모드, w 쓰기모드, a 파일 마지막에 새로운 내용 추가
 
 
-# writedata.py
+writedata.py
 f = open("C:/doit/새파일.txt", 'w')
 for i in range(1, 11):
     data = "%d번째 줄입니다.\n" % i
@@ -902,6 +902,7 @@ f.close()
 
 
 #### 프로그램 외부에 저장된 파일을 읽는 방법
+
 readline() 함수 이용하기
 
 readline.py

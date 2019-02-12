@@ -904,13 +904,13 @@ f.close()
 #### 프로그램 외부에 저장된 파일을 읽는 방법
 readline() 함수 이용하기
 
-# readline.py
+readline.py
 f = open("c:/doit/새파일.txt",'r')
 line = f.readline()
 print(line)
 f.close()
 
-# readline_all.py
+readline_all.py
 f = open("C:/doit/새파일.txt", 'r')
 while True:
     line = f.readline()

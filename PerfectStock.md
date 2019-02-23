@@ -27,3 +27,8 @@ data.head(5)
 쓰기모듈
 data.to_csv('test.csv')  # csv 쓰기
 
+### totoiseGit
+1.git for windows를 설치한다
+2.totoiseGit을 설치한다
+http://kwangho9-develope.blogspot.com/2016/11/git-clienttortoisegit.html
+

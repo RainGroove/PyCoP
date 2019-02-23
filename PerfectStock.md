@@ -1,5 +1,32 @@
 # PyCoP PerfectStock Project
 
+[1기 프로젝트 목차]
+
+1.프로젝트 환경설정
+1-1 아나콘다 최신설치, Pycharm(또는 익숙한 IDE)설치, Jupyter Notebook 설치
+       (책 08항목)
+1-2 Github 계정만들기
+
+2. 파이썬과 COM
+2-1 COM과 파이썬
+2-2 파이썬으로 엑셀다루기 (Pandas 엑셀 읽기쓰기 Code공유 : 정세훈)
+
+3. 키움증권API
+3-1 개발환경구축
+3-2 PyQT기초
+3-3 기초API익히기
+3-4 Pandas를 이용한 데이터기초분석
+3-5 Pandas, zipline을 이용한 백테스트
+3-6 matplotlib를 이용한 데이터 시각화
+3-7 PyQt를 이용한 GUI 프로그래밍
+
+4. 실전개발 1일
+5. 실전개발 2일
+6. 실전개발 3일
+7. 실전개발 4일
+8. 실전개발 5일
+
+
 
 ### 파이썬과 COM
 COM이란 마이크로소프트에서 개발한 기술로, Component Object Model이라는 용어이다.

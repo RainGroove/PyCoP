@@ -13,12 +13,17 @@ explore = win32com.client.Dispatch("InternetExplorer.Application")
 explore.Visible = True  
 
 
-
-
-
 ### Pandas로 엑셀 읽어오기
+Pandas는 엑셀읽기, 편하게 할 수있다.
+기존에 어려운 모듈들이 많음
 
+읽어오기 모듈
+import pandas as pd
+import numpy as np
 
+data = pd.read_excel('stat_104102.xls')
+data.head(5)
 
-
+쓰기모듈
+data.to_csv('test.csv')  # csv 쓰기
 
